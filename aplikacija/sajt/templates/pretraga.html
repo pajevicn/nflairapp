@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Rezultati pretrage{% endblock %}
+
+{% block body %}
+<div class="container">
+            {% if proj %}
+        <h3>Nadjeno {{ proj|length }} artikal/a {{ proj|pluralize }}:</h3>
+
+            {% for project in proj %}
+
+                <a href="{% url 'aplikacija:detail' project.id %}" >
+                    <h4  >{{ project.Ime }}</h4>
+                </a>
+
+
+            {% endfor %}
+
+
+
+        {% else %}
+        <p>Trazeni artikal ne postoji u bazi.</p>
+       {% endif %}
+</div>
+{% endblock %}

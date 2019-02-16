@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %} Administracija {% endblock %}
+{% block body %}
+<div class="container">
+    <br><br>
+    <div>
+        <div>
+            <a href="{% url 'aplikacija:narudzbina' %}">Spisak narudzbina</a></li>
+        </div>
+    <hr><h2>Dodavanje</h2>
+     <a href="{% url 'aplikacija:prodavnica_add' %}">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> &nbsp;
+                            Dodaj prodavnicu
+     </a> <br>
+      <a href="{% url 'aplikacija:proizvodi_add' %}">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> &nbsp;
+                            Dodaj proizvod
+     </a><br>
+     <a href="{% url 'aplikacija:porudzbina_add' %}">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> &nbsp;
+                            Dodaj porudzbinu
+     </a>
+    </div>
+<br><br>
+{% endblock %}
+</div>

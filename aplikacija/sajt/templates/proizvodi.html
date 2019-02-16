@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %} Proizvodi {% endblock %}
+{% block body %}
+<div class="container">
+  <br><br>
+    <h2>Proizvodi</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Ime</th>
+      <th scope="col">Stanje</th>
+      <th scope="col">Cijena</th>
+    </tr>
+  </thead>
+  <tbody>
+       {% for spisak in proizvodi %}
+    <tr>
+      <td>{{ spisak.Ime }}</td>
+      <td>{{ spisak.Stanje }}</td>
+      <td>{{ spisak.Cijena }}</td>
+    </tr>
+       {% endfor %}
+
+  </tbody>
+</table>
+  <br><br>
+{% endblock %}
+</div>
